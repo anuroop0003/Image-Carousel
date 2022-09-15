@@ -1,5 +1,6 @@
 import "../index.css";
-function ImageCollection({ handleClick, photos, css, imageToDisplay}) {
+function ImageCollection({ handleClick, thumbnailImages, index }) {
+
   return (
     <div
       style={{
@@ -10,12 +11,19 @@ function ImageCollection({ handleClick, photos, css, imageToDisplay}) {
         top: "90%",
         display: "flex",
         flexDirection: "row",
-        justifyContent:"center",
-        overflow:"auto"
+        justifyContent: "center",
+        overflow: "auto",
       }}
     >
-      {photos.map((photo, i) => (
-        <img className="image-collection" onClick={() =>handleClick(i+1)} key={i} alt={i} src={photo}></img>
+      {thumbnailImages.map((photo, i) => (
+        <img
+          className="image-collection"
+          style={index === i ? { boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(35, 203, 49) 0px 0px 0px 3px" } : null}
+          onClick={() => handleClick(i)}
+          key={i}
+          alt=""
+          src={photo}
+        ></img>
       ))}
     </div>
   );

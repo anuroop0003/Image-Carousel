@@ -30,7 +30,7 @@ code {
 
 /*  Buttons */
 
-button {
+#preview-container button {
   position: fixed;
   display: flex;
   align-items: center;
@@ -57,6 +57,7 @@ button {
   padding-right: 10px;
 }
 
+/* Thumbnail */
 
 .image-collection {
   height: calc(100% - 20px);
@@ -68,11 +69,4 @@ button {
 
 .image-collection:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
-}
-
-/* .image-collection:active {
-  
-} */
-#custom-css {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(35, 203, 49) 0px 0px 0px 3px;
 }
