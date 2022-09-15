@@ -16,7 +16,7 @@ code {
 
 #preview-container {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 80vh;
 }
 
@@ -58,17 +58,21 @@ button {
 }
 
 
-.image-collection-div {
+.image-collection {
   height: calc(100% - 20px);
-  width: auto;
-  /* background-color: aqua; */
-  /* border: 10px solid black; */
-  /* padding: 10px 5px; */
+  width: calc(100px - 20px);
   border-radius: 10px;
-  margin: auto auto;
+  margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 
-.image-collection-div img {
-  border-radius: 10px;
+.image-collection:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+}
+
+/* .image-collection:active {
+  
+} */
+#custom-css {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(35, 203, 49) 0px 0px 0px 3px;
 }
