@@ -13,7 +13,7 @@ function ImageCollection({ handleClick, photos }) {
       }}
     >
       {photos.map((photo, i) => (
-        <img className="image-collection-div" onClick={() =>handleClick(i+1)} key={i} src={photo}></img>
+        <img className="image-collection-div" onClick={() =>handleClick(i+1)} key={i} alt={i} src={photo}></img>
       ))}
     </div>
   );

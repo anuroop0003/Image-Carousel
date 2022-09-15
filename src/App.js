@@ -18,8 +18,6 @@ function App() {
   const [value, setValue] = useState(1);
 
   const handleClick = (props) => {
-    let newIndex = 0;
-    let x = 0;
     let resetValue = 0;
     // setValue((temp = value + 1));
     // console.log(value);
@@ -30,27 +28,28 @@ function App() {
           console.log(resetValue);
           return setValue(1);
         } else {
-          return setValue((newIndex = value + 1));
+          return setValue((next) => next + 1);
         }
       case "-":
         resetValue = value - 1;
         if (resetValue <= 0) {
           return setValue(photos.length);
         } else {
-          return setValue((newIndex = value - 1));
+          return setValue((prev) => prev + 1);
         }
       default:
-        return null;
+        return setValue(props);
     }
-  }
+  };
 
-  let imageToDisplay = photos.filter((image, i) => {
-    if (i === value - 1) return image;
-  });
+  let imageToDisplay = photos.filter((image, i) => (i === value - 1));
   return (
-    <div style={{height:"100vh", width:"100%"}}>
-    <ImagrtoPreview handleClick = {handleClick} imageToDisplay = {imageToDisplay}/>
-    <ImageCollection photos = {photos}/>
+    <div style={{ height: "100vh", width: "100%" }}>
+      <ImagrtoPreview
+        handleClick={handleClick}
+        imageToDisplay={imageToDisplay}
+      />
+      <ImageCollection handleClick={handleClick} photos={photos} />
     </div>
   );
 }
