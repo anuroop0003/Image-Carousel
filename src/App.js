@@ -16,7 +16,6 @@ function App() {
     "./images/10.jpg",
   ];
   const [value, setValue] = useState(1);
-  const [css, setCss] = useState("custom-css");
 
   const handleClick = (props) => {
     let resetValue = 0;
@@ -50,7 +49,7 @@ function App() {
         handleClick={handleClick}
         imageToDisplay={imageToDisplay}
       />
-      <ImageCollection handleClick={handleClick} photos={photos} css={css}/>
+      <ImageCollection handleClick={handleClick} photos={photos}/>
     </div>
   );
 }
