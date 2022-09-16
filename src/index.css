@@ -59,7 +59,7 @@ code {
 
 /* Thumbnail */
 
-.image-collection {
+.thumbnail-image {
   height: calc(100% - 20px);
   width: calc(100px - 20px);
   border-radius: 10px;
@@ -67,6 +67,6 @@ code {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 
-.image-collection:hover {
+.thumbnail-image:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
 }

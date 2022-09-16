@@ -1,5 +1,5 @@
 import "../index.css";
-function ImageCollection({ handleClick, thumbnailImages, index }) {
+function ImageThumbnail({ handleClick, thumbnailImages, index }) {
 
   return (
     <div
@@ -17,7 +17,7 @@ function ImageCollection({ handleClick, thumbnailImages, index }) {
     >
       {thumbnailImages.map((photo, i) => (
         <img
-          className="image-collection"
+          className="thumbnail-image"
           style={index === i ? { boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(35, 203, 49) 0px 0px 0px 3px" } : null}
           onClick={() => handleClick(i)}
           key={i}
@@ -29,4 +29,4 @@ function ImageCollection({ handleClick, thumbnailImages, index }) {
   );
 }
 
-export default ImageCollection;
+export default ImageThumbnail;

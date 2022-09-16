@@ -1,4 +1,4 @@
-import ImageCollection from "./components/imagecollection";
+import ImageCollection from "./components/imagethumbnail";
 import ImagrtoPreview from "./components/imagetopreview";
 import { useState } from "react";
 
